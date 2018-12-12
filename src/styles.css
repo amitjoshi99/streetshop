@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+.bg {
+    background-size: cover;
+}
+.btn,.card-header{
+    background-color:#3ea281;
+}

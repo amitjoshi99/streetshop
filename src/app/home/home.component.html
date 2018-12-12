@@ -1,0 +1,132 @@
+<ul>
+  <li>
+   <a class="navbar-brand" href="#">
+    <img src="./assets/image/logo.png" alt="Logo" style="width:90px;">
+   </a>
+  </li>
+  <li style="float:right; margin-right:5%;">
+    <a data-toggle="modal" data-target="#signupModal"(click)="OnclickSignup()">Signup</a>
+  </li>
+  <li style="float:right; margin-top:16px; color:white">
+    <i class="fa fa-user"></i>
+  </li>
+</ul>
+
+
+<div class="container col-md-6 pt-6" style="margin-top:8%;">
+  <div class="card ">
+    <div class="card-body mx-6 "><br>
+      <h5 style="text-align:center; font-weight:bold">Welcom to your
+        StreetShop</h5><br><br>
+        <div class="container col-md-10 pt-6">
+          <input type="text" class="form-control" placeholder=" Find your shop here">
+          <br><br>
+          <div class="text-center mb-4">
+            <button type="submit" class="btn  btn-block z-depth-2 font-large">Find</button>
+          </div>
+          <h6 style="text-align:center;">Are you Shopkeeper 
+            <a data-toggle="modal" data-target="#loginModal" style="color:blue"
+              (click)="OnclickLogin()">click</a> here?</h6>
+        </div><br><br>
+    </div>
+  </div>
+</div>
+<div>
+
+  <!--Login Form-->
+  <div class="modal fade" id="loginModal" role="dialog" *ngIf="login">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal"
+          (click)="OnclickHome()">&times;</button>
+
+        <div class="container col-md-10 pt-6" style="margin-top:8%;">
+          <div class="card ">
+            <div class="card-body mx-6 "><br>
+              <p class="h4 mb-4" style="text-align:center">Log in</p>
+              <input type="email"  class="form-control mb-4" placeholder="E-mail">
+              <input type="password"  class="form-control mb-4" placeholder="Password">
+              <div class="d-flex justify-content-around">
+                <div><a href="">Forgot password?</a></div>
+                </div><br>
+                <a [routerLink]="['/home']">
+                  <button type="submit" class="btn  btn-block z-depth-2
+                    font-large">Login</button><br>
+                </a>
+                <p style="text-align:center">Not a member?
+                  <a data-toggle="modal" data-target="#signupModal"
+                     data-dismiss="modal" style="color:blue" 
+                    (click)="OnclickSignup()">Register</a>
+                </p>
+                <p style="text-align:center">or sign in with:<br><br>
+                  <a type="button" class="light-blue-text mx-2">
+                    <i class="fa fa-facebook-official"></i>
+                  </a>
+                  <a type="button" class="light-blue-text mx-2">
+                    <i class="fa fa-google"></i>
+                  </a>
+                  <a type="button" class="light-blue-text mx-2">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div><br><br>
+         </div>
+      </div>
+    </div>
+  </div>
+
+
+<!--Signup Form-->
+
+<div class="modal fade" id="signupModal" role="dialog" *ngIf="signup">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal"
+        (click)="OnclickHome()">&times;</button>
+      <div class="container col-md-10 pt-6" style="margin-top:6%;">
+        <div class="card ">
+          <div class="card-body mx-6 "><br>
+            <p class="h4 mb-4" style="text-align:center">Sign in</p>
+
+            <div class="form-row mb-4">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="First name">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Last name">
+              </div>
+            </div>
+
+            <input type="email"  class="form-control mb-4" placeholder="E-mail">
+            <input type="password"  class="form-control mb-4" placeholder="Password">
+            <input type="number"  class="form-control mb-4" placeholder="Phone number">
+
+            <p style="text-align:center"> Have a account ?
+              <a data-toggle="modal" data-target="#loginModal" 
+                data-dismiss="modal" style="color:blue"
+                (click)="OnclickLogin()">Log in</a>
+            </p>
+            <a [routerLink]="['/login']">
+              <button type="submit" class="btn  btn-block z-depth-2
+                font-large">Sign in</button><br>
+            </a>
+
+            <p style="text-align:center">or sign in with:<br><br>
+              <a type="button" class="light-blue-text mx-2">
+                <i class="fa fa-facebook-official"></i>
+              </a>
+              <a type="button" class="light-blue-text mx-2">
+                <i class="fa fa-google"></i>
+              </a>
+              <a type="button" class="light-blue-text mx-2">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div><br><br>
+    </div>
+  </div>
+</div>

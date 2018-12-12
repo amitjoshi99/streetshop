@@ -1,0 +1,70 @@
+<body style="background-color:white">
+<div class="row" style="background-color:white;" >
+  <div class="col-sm-3">
+    <img src="../assets/image/logo.png" class="logoImg">
+  </div>
+  <div class="col-sm-9">
+    <br> <h3>{{shopkeeperDetail[0].shopName}}</h3>
+    <p>{{shopkeeperDetail[0].name}}</p>
+    <p class="p">{{shopkeeperDetail[0].streetAddress}}, {{shopkeeperDetail[0].city}}</p>
+    <p class="p">{{shopkeeperDetail[0].state}}, {{shopkeeperDetail[0].postalCode}}</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-2 details">
+    <div style="overflow-x:auto;">
+      <table>
+        <tr>
+          <p style="font-weight:bold">Select your product here</p>
+        </tr>
+        <tr><a *ngFor="let item of productlist1">{{item[0]}} Kg</a></tr>
+        <tr>Rice</tr>
+        <tr>Rice</tr>
+        <tr>Rice</tr>
+        <tr>Rice</tr>
+        <tr>Rice</tr>
+        <tr>Rice</tr>
+        <tr>Rice</tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="col-sm-7" style="margin-right:auto;">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark"
+        style="background-color: #800000">
+        <div class="container">
+          <a class="navbar-brand" style="font-weight:bold; color:white;">Product Menu</a>
+        </div>
+      </nav>
+    </header><br>
+    <div class="row">
+      <div class="col-sm-8">
+        <p style="font-weight:bold">List of avilable item</p>
+        <table>
+          <tr *ngFor="let list of productlist">{{list.rice}}</tr>
+        </table>
+      </div>
+      <div class="col-sm-2">
+        <p style="font-weight:bold">Rate per/kg</p>
+        <table>
+          <tr *ngFor="let list of productlist">{{list.rate}}</tr>
+        </table>
+      </div>
+      <div class="col-sm-2">
+        <p style="font-weight:bold">Add<p>
+          <button type="button" class="btn-success btn-sm" style="height:24px;">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3" style="margin-right:auto;">
+    <form class="form-inline">
+      <i class="fa fa-search" aria-hidden="true"></i>
+      <input class="form-control form-control-sm ml-3 w-75" type="text" 
+        placeholder="Search" aria-label="Search">
+    </form>
+  </div>
+</div>
+</body>
